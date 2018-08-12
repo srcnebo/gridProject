@@ -1,0 +1,25 @@
+.container{
+    display: grid;
+    
+    /*
+    grid-template-columns:  auto 970px auto;
+    grid-template-rows: 4fr 5fr 4fr 6fr 3fr 1fr;
+    */
+    background: rgb(82, 82, 160);
+    width: 970px;
+    grid-gap: 3px;
+    margin:auto;
+}
+
+.container > div {
+    background: #eee;
+    padding: 1em;
+}
+
+.container > :nth-child(odd){
+    background: #ddd;
+}
+
+.hero{
+    background: rgb(209, 98, 98);
+}
