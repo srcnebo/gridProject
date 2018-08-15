@@ -239,11 +239,6 @@ header{
 
 }   
 
-.dev-content{
-    background: #ffffff;
-    box-shadow: rgba(94, 94, 94, 0.288) 0px 0px 50px 0px;
-}
-
 /* ---- End Of Content ---- */
 
 
@@ -390,7 +385,19 @@ footer{
     border: 1px solid #ddd;
     -webkit-order: 1;
     order: 1;
+    display:flex;
+    flex-direction: row;
+    background: #ffffff;
+    box-shadow: rgba(94, 94, 94, 0.288) 0px 0px 50px 0px;
   }
+
+  .dev-content a{
+    font-size: 11px;
+    padding: 8px 15px 8px 15px;
+    margin-top: 50px;
+    float: right;
+  }
+
   input[type=radio], .dev-content {
     display: none;
   }
