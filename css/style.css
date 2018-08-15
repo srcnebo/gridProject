@@ -1,26 +1,34 @@
 html{
     box-sizing: border-box;
 }
-/* , *:before, *:after{
+
+@font-face {
+    font-family: 'Sansation Bold Italic';
+    src: url('Sansation_Bold_Italic.ttf'); }
+    @font-face {
+        font-family: 'Sansation_Light';
+        src: url('Sansation_Light.ttf'); }
+    /* , *:before, *:after{
     box-sizing: inherit;
 } */
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Exo', sans-serif;
     /*font-family: 'Montserrat', sans-serif;*/
     font-size: 14px;
     font-weight: 300px;
     background: #e2e2e2;
+
 }
 
 
 .container{
     display: grid;
-    
     /*
     grid-template-columns:  auto 970px auto;
     grid-template-rows: 4fr 5fr 4fr 6fr 3fr 1fr;
     */
-    width: 1170px;
+    width: 100%;
+    max-width: 75rem;
     grid-gap: 3px;
     margin:auto;
 }
@@ -36,6 +44,7 @@ body{
 
 header{
     background: #444444;
+
 }
 
 .hero{
@@ -45,7 +54,6 @@ header{
     color: #EFEFEF;
     justify-items: center;
 }
-
 
 
 .hero-image>img{
@@ -58,11 +66,12 @@ header{
     display: grid;
     margin-right: 120px;
     border: #414141;
+
 }
 
 .hero-copy h1{
     font-size: 28px;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Sansation_Light', 'Roboto', sans-serif;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -136,12 +145,12 @@ header{
 
 
 
-/* --- STart of Page styling ---- */
+/* --- STart of content styling ---- */
 
 .changetext{
     color: rgb(252, 252, 252);
     font-weight: 700;
-    font-style: italic;
+    font-family: 'Sansation Bold Italic';
 }
 
 .features{
@@ -252,6 +261,7 @@ footer{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-items: space-between;
+    grid-gap: 2rem;
 }
 
 .square{
@@ -290,6 +300,44 @@ footer{
 .social i{
     font-size: 28px;
     margin-left: 10px;
+    position: relative;
+}
+
+.social i span{
+    font-size: .9rem;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    background:#afafaf;
+    color: #343434;
+    position: absolute;
+    bottom: 2.5rem;
+    left: 0;
+
+    display: none;
+
+}
+
+.social i:hover{
+    color: #247ebe;
+}
+
+.social i:hover span{
+    display: inline-block;
+}
+
+
+.social i:hover span::after {
+    content:"";
+    position: absolute;
+    bottom: -9px;
+    left: 10px;
+    
+    width: 10px;
+    height: 10px;
+    background: #afafaf;
+
+    clip-path: polygon(0% 0, 0% 100%, 100% 0%);
+    z-index: 0;
 }
 
 .totop{
@@ -406,7 +454,7 @@ footer{
 #fhover:hover::after{
     content:"";
     position: absolute;
-    bottom: -35px;
+    bottom: 1px;
     
     width: 40px;
     height: 40px;
@@ -432,3 +480,5 @@ footer{
 }
 
 /* End of Triangles */
+
+
